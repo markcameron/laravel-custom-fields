@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "da41b4557dd21d21b06bc2646f194ec0",
+    "content-hash": "b67141e31525ed9328470aad276ac79c",
     "packages": [
         {
             "name": "asseco-voice/laravel-blueprint-audit",
@@ -62,21 +62,21 @@
         },
         {
             "name": "asseco-voice/laravel-common",
-            "version": "v3.0.0",
+            "version": "dev-laravel-11",
             "source": {
                 "type": "git",
-                "url": "https://github.com/asseco-voice/laravel-common.git",
-                "reference": "c263e87a143ff55d08f8410e481312b631ab00d2"
+                "url": "https://github.com/markcameron/laravel-common.git",
+                "reference": "fce34f064819dbae70374d52e6bb48f2c26d156a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/asseco-voice/laravel-common/zipball/c263e87a143ff55d08f8410e481312b631ab00d2",
-                "reference": "c263e87a143ff55d08f8410e481312b631ab00d2",
+                "url": "https://api.github.com/repos/markcameron/laravel-common/zipball/fce34f064819dbae70374d52e6bb48f2c26d156a",
+                "reference": "fce34f064819dbae70374d52e6bb48f2c26d156a",
                 "shasum": ""
             },
             "require": {
                 "asseco-voice/laravel-blueprint-audit": "^2.0",
-                "laravel/framework": "^10.0",
+                "laravel/framework": "^10.0|^11.0",
                 "php": "^8.1"
             },
             "require-dev": {
@@ -98,7 +98,11 @@
                     "Asseco\\Common\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Asseco\\Common\\Tests\\": "tests"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -110,10 +114,9 @@
                 "php"
             ],
             "support": {
-                "issues": "https://github.com/asseco-voice/laravel-common/issues",
-                "source": "https://github.com/asseco-voice/laravel-common/tree/v3.0.0"
+                "source": "https://github.com/markcameron/laravel-common/tree/laravel-11"
             },
-            "time": "2023-08-07T11:27:30+00:00"
+            "time": "2024-05-14T09:41:59+00:00"
         },
         {
             "name": "brick/math",
@@ -8956,7 +8959,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "asseco-voice/laravel-common": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
